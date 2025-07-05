@@ -1,10 +1,12 @@
 # Automation Utilities
 
-This repository contains various scripts for UI automation. The new `dom_framework.py` module provides a simple and extensible framework for DOM analysis.
+This repository contains various scripts for UI automation. The new `dom_framework` package provides a simple and extensible framework for DOM analysis. The package is split into multiple modules for easier maintenance.
 
 ## DOM Framework
 
-`dom_framework.py` defines a base `DOMAnalyzer` class and implementations for BeautifulSoup (`SoupDOMAnalyzer`) and Selenium (`SeleniumDOMAnalyzer`).
+The package organizes analyzers in separate modules (`base`, `soup`, `selenium`) following modern Python package practices.
+
+`dom_framework` provides a base `DOMAnalyzer` class and implementations for BeautifulSoup (`SoupDOMAnalyzer`) and Selenium (`SeleniumDOMAnalyzer`).
 
 Use `create_analyzer("soup")` for static HTML or `create_analyzer("selenium")` for live pages. You can register custom analyzers with `register_analyzer`.
 
